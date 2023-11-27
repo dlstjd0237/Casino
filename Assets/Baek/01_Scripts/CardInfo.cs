@@ -19,7 +19,7 @@ public class Card
 }
 public class CardInfo : MonoBehaviour
 {
-    [SerializeField] CardListSO _cardListSO;
+    public CardListSO _cardListSO;
 
 }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 public class CardOpen : MonoBehaviour
 {
-    public Card CardInFo;
+    public Card CardInfo;
     private void Awake()
     {
         Invoke(nameof(OpenCard),2);
