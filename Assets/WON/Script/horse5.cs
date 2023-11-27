@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class horse3 : MonoBehaviour
+public class horse5 : MonoBehaviour
 {
-    //3º¸ 7cm
+    //1º¸ 0~1.3cm
     float sec;
     void Start()
     {
@@ -16,9 +17,9 @@ public class horse3 : MonoBehaviour
         yield return new WaitForSeconds(1);
         while (true)
         {
-            int movement = Random.Range(70, 75);
+            int movement = Random.Range(0, 13);
             transform.position += new Vector3(0, movement, 0) * Time.deltaTime;
-            sec = Random.Range(1.2f, 2.5f);//1.2~2.5
+            sec = Random.Range(0.1f, 0.2f);//0.1~0.2
             yield return new WaitForSeconds(sec);
         }
     }
