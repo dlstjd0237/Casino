@@ -17,6 +17,8 @@ public class Difficulty : Singleton<Difficulty>
     [SerializeField] private Ease ease;
     [SerializeField] private float duration;
     [SerializeField] private DifficultyType difficultyType;
+    
+    public DifficultyType DifficultyType => difficultyType;
 
     protected override void Awake()
     {
