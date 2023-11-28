@@ -11,7 +11,8 @@ public class CardOpen : MonoBehaviour
     }
 
     public void OpenCard()
-    {
+    { 
         transform.DORotate(new Vector3(0, 180, 0), 2);
+        DOTween.Kill(this);
     }
 }
