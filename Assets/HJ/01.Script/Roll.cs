@@ -18,6 +18,7 @@ public class Roll : MonoBehaviour
 
     private void Awake()
     {
+        coinValue.text = $"Coin : {CasinoGameManager.Instance.Coin}";
         stopButton.color = Color.gray;
     }
 
@@ -25,6 +26,9 @@ public class Roll : MonoBehaviour
     {
         if(isStartSpin == false)
         {
+            CasinoGameManager.Instance.Coin -= 100;
+            coinValue.text = $"Coin : {CasinoGameManager.Instance.Coin}";
+
             isStartSpin = true;
             DOTween.To(() => 0, x => changeSpeed = x, rotSpeed, 5).OnComplete(() =>
             {
@@ -45,11 +49,8 @@ public class Roll : MonoBehaviour
                 if (int.Parse(rayPin.RayDown()) <= 0)
                     coinValue.text = $"Coin : 0";
                 else
-                {
-                    coinValue.text = $"Coin : {currentCoinValue += int.Parse(rayPin.RayDown())}";
+                    coinValue.text = $"Coin : {CasinoGameManager.Instance.Coin += int.Parse(rayPin.RayDown())}";
 
-
-                }
                 stopButton.color = Color.gray;
                 isStartSpin = false;
             });
