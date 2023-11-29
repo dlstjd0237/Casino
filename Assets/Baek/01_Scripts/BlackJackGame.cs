@@ -17,7 +17,11 @@ public class BlackJackGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _enemyPointText;
     [SerializeField] private TextMeshProUGUI _gameResultText;
     [SerializeField] private TextMeshProUGUI _takePointText;
-    [SerializeField] private GameObject _gamePanel;
+    [SerializeField] private TextMeshProUGUI _betText;
+    [SerializeField] private GameObject _noMoneyText;
+    [SerializeField] private GameObject _gamePanel, _gameStartPanel;
+    [SerializeField] private int _bet = 100;
+    [SerializeField] private CurrentCoinSet _cointSet;
     private int _currentPlayerPoint = 0;
     private int _currentEnemyPoint = 0;
     private int _currentPlayerCardAmount = 0;
@@ -27,31 +31,41 @@ public class BlackJackGame : MonoBehaviour
     private BlackJackTurn _blackJackTurn;
     private void Awake()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            CasinoGameManager.Instance.Coin += 100;
-            Debug.Log(CasinoGameManager.Instance.Coin);
-        }
+
         _audioSource = GetComponent<AudioSource>();
         _cardInfo = GetComponent<CardInfo>();
         _cardList.Clear();
         _blackJackTurn = BlackJackTurn.Player;
+        _betText.SetText(_bet.ToString());
         CardCount = _cardInfo._cardListSO.CardList.Count;
-        StartBtn();
 
     }
 
     public void StartBtn()
     {
-        for (int i = 0; i < 2; i++)
+        if (CasinoGameManager.Instance.Coin >= _bet)
         {
-            DrawCard(_blackJackTurn);
+            CasinoGameManager.Instance.Coin -= _bet;
+            _cointSet.CoinTextSet();
+            _cardList.Clear();
+            _gameStartPanel.SetActive(false);
+            _blackJackTurn = BlackJackTurn.Player;
+            _gamePanel.SetActive(false);
+            for (int i = 0; i < 2; i++)
+            {
+                DrawCard(_blackJackTurn);
+            }
+        }
+        else
+        {
+            _noMoneyText.SetActive(true);
         }
     }
 
     public void HitBtn()
     {
-        DrawCard(_blackJackTurn);
+        if (_blackJackTurn == BlackJackTurn.Player)
+            DrawCard(_blackJackTurn);
     }
 
 
@@ -190,21 +204,28 @@ public class BlackJackGame : MonoBehaviour
     {
         OnPanel();
         _gameResultText.SetText("Defeat");
-        _takePointText.SetText("-200");
+        _takePointText.SetText("+ 0");
+        _cointSet.CoinTextSet();
     }
 
     private void PlayerWin()
     {
         OnPanel();
         _gameResultText.SetText("Victory");
-        _takePointText.SetText("+200");
+        CasinoGameManager.Instance.Coin += _bet * 2;
+
+        _takePointText.SetText("+ "+(_bet * 2).ToString());
+        _cointSet.CoinTextSet();
     }
 
     private void Draw()
     {
         OnPanel();
         _gameResultText.SetText("Draw");
-        _takePointText.SetText("+100");
+        CasinoGameManager.Instance.Coin += _bet;
+
+        _takePointText.SetText("+ "+_bet.ToString());
+        _cointSet.CoinTextSet();
     }
     private void OnPanel()
     {
@@ -213,11 +234,16 @@ public class BlackJackGame : MonoBehaviour
 
     public void Stand()
     {
-        _blackJackTurn = BlackJackTurn.Enemy;
-        _cardList.Clear();
-        StartCoroutine(EnemyAi());
+        if (_blackJackTurn == BlackJackTurn.Player)
+        {
+            _blackJackTurn = BlackJackTurn.Enemy;
+            _cardList.Clear();
+            StartCoroutine(EnemyAi());
+
+        }
 
     }
+
 
     private IEnumerator EnemyAi()
     {
@@ -233,9 +259,9 @@ public class BlackJackGame : MonoBehaviour
         }
     }
 
-    public void NewGame(string qwer)
+    public void NewGame(string SceneName)
     {
-        SceneManager.LoadScene(qwer);
+        SceneManager.LoadScene(SceneName);
     }
 
 }
