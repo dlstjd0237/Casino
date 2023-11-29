@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         _animator.SetBool(IsRun, true);
         if (Input.GetMouseButtonDown(0))
         {
-            transform.Translate(Vector3.right * (0.01f * _speed));
+            transform.Translate(Vector3.right * (0.015f * _speed));
         }
     }
 }

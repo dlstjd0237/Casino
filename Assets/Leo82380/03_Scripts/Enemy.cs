@@ -26,13 +26,13 @@ public class Enemy : MonoBehaviour
         switch (Difficulty.Instance.DifficultyType)
         {
             case DifficultyType.Easy:
-                _speed = 0.5f;
+                _speed = 0.4f;
                 break;
             case DifficultyType.Normal:
-                _speed = 1f;
+                _speed = .5f;
                 break;
             case DifficultyType.Hard:
-                _speed = 1.5f;
+                _speed = .7f;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
