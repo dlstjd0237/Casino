@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Leo82380/01_Scene/Racing_Game.unity
     guid: 1b3c298189ee882459e1eac9d77c207f
+  - enabled: 1
+    path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_100.unity
+    guid: 09fea95cccb3a52409b9850a5faafe79
+  - enabled: 1
+    path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_200.unity
+    guid: 8114d11f72d2d2143ab1dd6790b566cb
+  - enabled: 1
+    path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_500.unity
+    guid: 2db26baad09d0fb46a028c6740775796
   m_configObjects: {}
