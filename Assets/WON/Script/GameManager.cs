@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject beforeSceneObject;
 
     [Header("函荐盖")]
-    int whatAeMa = 0;
-    int WhoVictory = 0;
+    public int whatAeMa = 0;
+    public int WhoVictory = 0;
+    bool ming = false;
 
 
     void Start()
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "scene1")
+        if (SceneManager.GetActiveScene().name == "result")
         {
             Destroy(gameObject,10f);
         }
@@ -42,38 +43,44 @@ public class GameManager : MonoBehaviour
 
     void sceneMove()
     {
-        //SceneManager.LoadScene("end");
+        DontDestroyOnLoad(gameObject);
+        SceneManager.LoadScene("result");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "horse1")
+        if(collision.collider.tag == "horse1" && ming == false)
         {
             WhoVictory = 1;
             print("富1铰府");
+            ming = true;
             Invoke("sceneMove", 3f);
         }
-        if (collision.collider.tag == "horse2")
+        if (collision.collider.tag == "horse2" && ming == false)
         {
             WhoVictory = 2;
             print("富2铰府");
+            ming = true;
             Invoke("sceneMove", 3f);
         }
-        if (collision.collider.tag == "horse3")
+        if (collision.collider.tag == "horse3" && ming == false)
         {
             WhoVictory = 3;
             print("富3铰府");
+            ming = true;
             Invoke("sceneMove", 3f);
         }
-        if (collision.collider.tag == "horse4")
+        if (collision.collider.tag == "horse4" && ming == false)
         {
             WhoVictory = 4;
             print("富4铰府");
+            ming = true;
             Invoke("sceneMove", 3f);
         }
-        if (collision.collider.tag == "horse5")
+        if (collision.collider.tag == "horse5" && ming == false)
         {
             WhoVictory = 5;
             print("富5铰府");
+            ming = true;
             Invoke("sceneMove", 3f);
         }
     }

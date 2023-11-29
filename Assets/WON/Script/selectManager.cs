@@ -52,5 +52,9 @@ public class selectManager : MonoBehaviour
                 SceneManager.LoadScene("dfd");
             }
         }
+        if (SceneManager.GetActiveScene().name == "result")
+        {
+            Destroy(gameObject, 10f);
+        }
     }
 }

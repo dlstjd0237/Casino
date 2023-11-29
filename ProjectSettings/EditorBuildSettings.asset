@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/WON/Scenes/dfd.unity
     guid: dafcdae93a776df4cb83b7b5670d8d47
+  - enabled: 1
+    path: Assets/WON/Scenes/result.unity
+    guid: 1be49677fb25c7a4d96491b3b4a4c953
   m_configObjects: {}
