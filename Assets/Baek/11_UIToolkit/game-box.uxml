@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="game-box" class="gamecard">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="gamename-Label" style="-unity-text-align: upper-center; font-size: 95px; -unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; width: 100%; height: 10%;" />
+        <ui:VisualElement name="gameimage-box" style="flex-grow: 1; width: 100%; height: 50%; background-image: url(&apos;project://database/Packages/com.unity.2d.animation/Editor/Assets/ComponentIcons/Animation.IKCCD@256.png?fileID=21300000&amp;guid=1214a7ec362a4479ba225757639c24f2&amp;type=3#Animation.IKCCD@256&apos;);" />
+        <ui:VisualElement name="infocontain-box" style="flex-grow: 1; height: 40%;">
+            <ui:Label tabindex="-1" text="ㅇㅇㅇㅇㅇㅇㅇ" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-label" style="-unity-text-align: upper-center; margin-right: 80px; margin-left: 80px; -unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; font-size: 65px; flex-wrap: nowrap; white-space: normal;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
