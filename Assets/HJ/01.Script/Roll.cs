@@ -45,8 +45,11 @@ public class Roll : MonoBehaviour
                 if (int.Parse(rayPin.RayDown()) <= 0)
                     coinValue.text = $"Coin : 0";
                 else
+                {
                     coinValue.text = $"Coin : {currentCoinValue += int.Parse(rayPin.RayDown())}";
 
+
+                }
                 stopButton.color = Color.gray;
                 isStartSpin = false;
             });
