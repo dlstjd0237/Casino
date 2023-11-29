@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - horse1
+  - horse2
+  - horse3
+  - horse4
+  - horse5
   layers:
   - Default
   - TransparentFX
