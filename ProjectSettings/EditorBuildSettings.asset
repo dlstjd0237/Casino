@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Leo82380/01_Scene/Racing.unity
     guid: 215db7b116ffcb34a865a4aaeeb425c8
   - enabled: 1
+    path: Assets/HJ/00.Scen/Roulette.unity
+    guid: 5a7a71261eb31034bad2e4a283602b3e
+  - enabled: 1
     path: Assets/Leo82380/01_Scene/Racing_Game.unity
     guid: 1b3c298189ee882459e1eac9d77c207f
   - enabled: 1

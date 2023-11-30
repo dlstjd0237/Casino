@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 public class StoreUI : MonoBehaviour
 {
     [SerializeField] private List<StoreItemSO> _itemSOList;
+    [SerializeField] private UnityEvent _buyEvent;
     private UIDocument _doc;
     private VisualElement _root;
     private VisualElement _contain;
@@ -93,12 +95,14 @@ public class StoreUI : MonoBehaviour
 
     private void buy6()
     {
+
         if (CasinoGameManager.Instance.Coin >= 200)
         {
             CasinoGameManager.Instance.Coin -= 200;
             CasinoGameManager.Instance._coinData.Amount6++;
             _amount6.text = CasinoGameManager.Instance._coinData.Amount6.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void buy5()
@@ -109,6 +113,7 @@ public class StoreUI : MonoBehaviour
             CasinoGameManager.Instance._coinData.Amount5++;
             _amount5.text = CasinoGameManager.Instance._coinData.Amount5.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void buy4()
@@ -119,6 +124,7 @@ public class StoreUI : MonoBehaviour
             CasinoGameManager.Instance._coinData.Amount4++;
             _amount4.text = CasinoGameManager.Instance._coinData.Amount4.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void buy3()
@@ -129,6 +135,7 @@ public class StoreUI : MonoBehaviour
             CasinoGameManager.Instance._coinData.Amount3++;
             _amount3.text = CasinoGameManager.Instance._coinData.Amount3.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void buy2()
@@ -139,6 +146,7 @@ public class StoreUI : MonoBehaviour
             CasinoGameManager.Instance._coinData.Amount2++;
             _amount2.text = CasinoGameManager.Instance._coinData.Amount2.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void buy1()
@@ -149,6 +157,7 @@ public class StoreUI : MonoBehaviour
             CasinoGameManager.Instance._coinData.Amount1++;
             _amount1.text = CasinoGameManager.Instance._coinData.Amount1.ToString();
         }
+        _buyEvent?.Invoke();
     }
 
     private void Use6()

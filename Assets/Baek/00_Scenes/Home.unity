@@ -193,6 +193,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e888297be4279de47ab4bdb516f05c67, type: 2}
   - {fileID: 11400000, guid: 87985fc4f21cfcb4e9691d423b435aa1, type: 2}
   - {fileID: 11400000, guid: bbd7c7cf83f851e49ab74b72b5dd0104, type: 2}
+  - {fileID: 11400000, guid: 4020dcb1bbfe840409c681165142a648, type: 2}
   - {fileID: 11400000, guid: 6ae9c579e63dd39428f64dbdfd74d4e3, type: 2}
   _gameBox: {fileID: 9197481963319205126, guid: 4d25cdb80fdf2d349a124bd8d11e1da9, type: 3}
 --- !u!114 &8896668

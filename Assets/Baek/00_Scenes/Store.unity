@@ -186,6 +186,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemSOList:
   - {fileID: 11400000, guid: 47248d78b558fb24ea59d7efe514426d, type: 2}
+  _buyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1497775857}
+        m_TargetAssemblyTypeName: CurrentCoinSet, Assembly-CSharp
+        m_MethodName: CoinTextSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &63713073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,6 +573,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 247098594849962548, guid: 72c96e4664e14a3458efb8a17bf60b1a, type: 3}
   m_PrefabInstance: {fileID: 1497775855}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1497775857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2904626838105475323, guid: 72c96e4664e14a3458efb8a17bf60b1a, type: 3}
+  m_PrefabInstance: {fileID: 1497775855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a6762e11842ab448a08db4da05d666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1631126616
 PrefabInstance:
   m_ObjectHideFlags: 0
