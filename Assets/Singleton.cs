@@ -9,7 +9,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            if(instance == null)
+            if (instance == null)
             {
                 var go = new GameObject(typeof(T).Name);
                 instance = go.AddComponent<T>();
@@ -19,7 +19,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     }
     protected virtual void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(instance);
         }
@@ -28,7 +28,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     }
     protected virtual void OnDestroy()
     {
-        if(instance == this)
+        if (instance == this)
         {
             instance = null;
         }

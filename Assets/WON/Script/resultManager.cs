@@ -28,6 +28,7 @@ public class resultManager : MonoBehaviour
     {
         if(AeMa == WhoVictory)
         {
+            CasinoGameManager.Instance.Coin += 200;
             aeMa.text = "¿Ã∞Â¥Ÿ";
             Instantiate(victory2, this.transform.position, this.transform.rotation);
         }

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02dbdb7a7af790443bfe4245ea51fab1, type: 3}
+  m_Name: InRacing
+  m_EditorClassIdentifier: 
+  GameName: "\uC778\uC131\uB808\uC774\uC2F1"
+  GameInfo: "\uC560\uB9C8\uB97C \uC120\uD0DD\uD574 \uC2B9\uB9AC\uD558\uC138\uC694!"
+  SceneName: select
+  Image: {fileID: 21300000, guid: 84848d23ce0c5ba49be6a8c9938c33bd, type: 3}

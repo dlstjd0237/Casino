@@ -6,14 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Baek/00_Scenes/Home.unity
+    guid: 8e69ae913fb3c3040b04b59f4723ac74
+  - enabled: 1
     path: Assets/Baek/00_Scenes/TitleScreen.unity
     guid: c872da020f076524a966416719978db3
   - enabled: 1
     path: Assets/Leo82380/01_Scene/Racing.unity
     guid: 215db7b116ffcb34a865a4aaeeb425c8
   - enabled: 1
+    path: Assets/HJ/00.Scen/Roulette.unity
+    guid: 5a7a71261eb31034bad2e4a283602b3e
+  - enabled: 1
     path: Assets/Leo82380/01_Scene/Racing_Game.unity
     guid: 1b3c298189ee882459e1eac9d77c207f
+  - enabled: 1
+    path: Assets/Baek/00_Scenes/Store.unity
+    guid: 78ab9dd885856ac4da4aa57732e2ce2e
   - enabled: 1
     path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_100.unity
     guid: 09fea95cccb3a52409b9850a5faafe79
@@ -21,9 +30,21 @@ EditorBuildSettings:
     path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_200.unity
     guid: 8114d11f72d2d2143ab1dd6790b566cb
   - enabled: 1
+    path: Assets/Karin/SlotMachine.unity
+    guid: 2635cb60522569e448b7ab6dee9374c9
+  - enabled: 1
     path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_500.unity
     guid: 2db26baad09d0fb46a028c6740775796
   - enabled: 1
-    path: Assets/Baek/00_Scenes/Home.unity
-    guid: 8e69ae913fb3c3040b04b59f4723ac74
+    path: Assets/WON/Scenes/dfd.unity
+    guid: dafcdae93a776df4cb83b7b5670d8d47
+  - enabled: 1
+    path: Assets/WON/Scenes/result.unity
+    guid: 1be49677fb25c7a4d96491b3b4a4c953
+  - enabled: 1
+    path: Assets/WON/Scenes/select.unity
+    guid: f12e64ef147796b4487ce3648ed65ff0
+  - enabled: 1
+    path: Assets/Baek/00_Scenes/CoinMining.unity
+    guid: 9bc8fdc12a56ca640a7ceb4d0650255a
   m_configObjects: {}
