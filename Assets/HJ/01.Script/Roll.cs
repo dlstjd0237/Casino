@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class Roll : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Roll : MonoBehaviour
     [SerializeField] RayPin rayPin;
     [SerializeField] TextMeshProUGUI coinValue;
     [SerializeField] Image stopButton;
+    private int coin;
     float changeSpeed;
     bool isSpin;
     bool isStartSpin;
@@ -24,9 +26,12 @@ public class Roll : MonoBehaviour
 
     public void StartSpinRoulette()
     {
-        if(isStartSpin == false)
+        if (CasinoGameManager.Instance.Coin < 100)
+            coinValue.text = "Not enough Coin!";
+        else if (isStartSpin == false)
         {
-            CasinoGameManager.Instance.Coin -= 100;
+            CasinoGameManager.Instance.Coin -= 50;
+
             coinValue.text = $"Coin : {CasinoGameManager.Instance.Coin}";
 
             isStartSpin = true;
@@ -40,24 +45,47 @@ public class Roll : MonoBehaviour
 
     public void StopSpinRoulette()
     {
-        if(isSpin == true)
+        if (isSpin == true)
         {
             isSpin = false;
             DOTween.To(() => rotSpeed, x => changeSpeed = x, 0, 7).SetEase(Ease.OutCubic)
             .OnComplete(() =>
             {
-                if (int.Parse(rayPin.RayDown()) <= 0)
-                    coinValue.text = $"Coin : 0";
-                else
-                    coinValue.text = $"Coin : {CasinoGameManager.Instance.Coin += int.Parse(rayPin.RayDown())}";
+                if (CasinoGameManager.Instance.Coin + int.Parse(rayPin.RayDown()) >= 0)
+                {
+                    StartCoroutine(ReslutValue());
+                }
 
                 stopButton.color = Color.gray;
                 isStartSpin = false;
             });
         }
     }
+
+    IEnumerator ReslutValue()
+    {
+        int currentInt = CasinoGameManager.Instance.Coin;
+        int resultsInt;
+
+        if (rayPin.RayDown() == "*5" || rayPin.RayDown() == "/5")
+        {
+            resultsInt = CasinoGameManager.Instance.Coin + int.Parse(rayPin.RayDown());
+        }
+        resultsInt = CasinoGameManager.Instance.Coin + int.Parse(rayPin.RayDown());
+        bool isMasdaad = currentInt > resultsInt;
+
+        while (currentInt != resultsInt)
+        {
+            currentInt += isMasdaad ? -1 : 1;
+            coinValue.text = $"Coin : {currentInt}";
+            yield return null;
+        }
+    }
+
     private void Update()
     {
+        print(10);
         transform.Rotate(new Vector3(0, 0, -changeSpeed) * Time.deltaTime);
+        Debug.Log(CasinoGameManager.Instance.Coin);
     }
 }
