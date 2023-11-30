@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Item" src="project://database/Assets/Baek/11_UIToolkit/Item.uxml?fileID=9197481963319205126&amp;guid=1787d95e665e0884a867cd5134cb04ca&amp;type=3#Item" />
+    <Style src="project://database/Assets/Baek/11_UIToolkit/Store.uss?fileID=7433441132597879392&amp;guid=5c5b1cde74f71b343a90a0395442bb87&amp;type=3#Store" />
+    <ui:VisualElement name="contain-box" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; height: 40%; background-image: url(&apos;project://database/Assets/Baek/02_Sprites/INTO_Avon_Shop_scroller_interior.jpg?fileID=21300000&amp;guid=1c42354172fa6354bbfc88683a9e4e24&amp;type=3#INTO_Avon_Shop_scroller_interior&apos;);" />
+        <ui:ScrollView style="flex-grow: 1; height: 60%; background-image: url(&apos;project://database/Assets/Baek/02_Sprites/BlackJack/background_solitaire.png?fileID=21300000&amp;guid=72729659d8200c547899a56d9bca0e7b&amp;type=3#background_solitaire&apos;);">
+            <ui:Instance template="Item" name="Item" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+    <ui:Label tabindex="-1" text="사용 버튼은 부스 관리자 앞에서 사용해야 합니다." parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; left: 0; top: 20px; -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-text-align: upper-center; font-size: 31px; color: rgb(255, 255, 255); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px;" />
+</ui:UXML>

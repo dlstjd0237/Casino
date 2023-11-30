@@ -5,6 +5,10 @@ public class HB5 : MonoBehaviour
     public bool horse5 = false;
     public void OnClickExit()
     {
-        horse5 = true;
+        if (CasinoGameManager.Instance.Coin >= 100)
+        {
+            CasinoGameManager.Instance.Coin -= 100;
+            horse5 = true;
+        }
     }
 }

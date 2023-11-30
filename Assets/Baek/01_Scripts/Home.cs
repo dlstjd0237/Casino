@@ -11,7 +11,7 @@ public class Home : MonoBehaviour
     private VisualElement _root;
     private VisualElement _cardContain;
     private Button _leftBtn, _rightBtn;
-    private float _cardCotainLeft = 1;
+    private float _cardCotainLeft = 0;
     private void Awake()
     {
         _doc = GetComponent<UIDocument>();

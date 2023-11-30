@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         _animator.SetBool(IsRun, true);
+        Debug.Log(Difficulty.Instance.DifficultyType);
         switch (Difficulty.Instance.DifficultyType)
         {
             case DifficultyType.Easy:
@@ -34,10 +35,9 @@ public class Enemy : MonoBehaviour
             case DifficultyType.Hard:
                 _speed = .7f;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            
         }
-        
+
         while (true)
         {
             transform.Translate(Vector3.right * (_speed * Time.deltaTime));
