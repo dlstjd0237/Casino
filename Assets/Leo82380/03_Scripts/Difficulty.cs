@@ -15,7 +15,8 @@ public class Difficulty : Singleton<Difficulty>
     [SerializeField] private Ease ease;
     [SerializeField] private float duration;
     [SerializeField] private DifficultyType difficultyType;
-    
+    [SerializeField] private GameObject _no;
+
     public DifficultyType DifficultyType => difficultyType;
 
     protected override void Awake()
@@ -27,25 +28,51 @@ public class Difficulty : Singleton<Difficulty>
 
     public void Easy()
     {
-        Logger.Log("Easy");
-        difficultyType = DifficultyType.Easy;
-        GameStart();
+        if (CasinoGameManager.Instance.Coin >= 10)
+        {
+            CasinoGameManager.Instance.Coin -= 10;
+            Logger.Log("Easy");
+            difficultyType = DifficultyType.Easy;
+            GameStart();
+        }
+        else
+        {
+            _no.SetActive(true);
+        }
+
     }
-    
+
     public void Normal()
     {
-        Logger.Log("Normal");
-        difficultyType = DifficultyType.Normal;
-        GameStart();
+        if (CasinoGameManager.Instance.Coin >= 25)
+        {
+            CasinoGameManager.Instance.Coin -= 25;
+            Logger.Log("Normal");
+            difficultyType = DifficultyType.Normal;
+            GameStart();
+        }
+        else
+        {
+            _no.SetActive(true);
+        }
     }
-    
+
     public void Hard()
     {
-        Logger.Log("Hard");
-        difficultyType = DifficultyType.Hard;
-        GameStart();
+        if (CasinoGameManager.Instance.Coin >= 40)
+        {
+            CasinoGameManager.Instance.Coin -= 40;
+            Logger.Log("Hard");
+            difficultyType = DifficultyType.Hard;
+            GameStart();
+        }
+        else
+        {
+            _no.SetActive(true);
+        }
     }
-    
+
+
     private void GameStart()
     {
         SceneManager.LoadScene("Racing_Game");
