@@ -53,6 +53,7 @@ public class RacingManager : MonoBehaviour
                 else if (Difficulty.Instance.DifficultyType == DifficultyType.Hard)
                     CasinoGameManager.Instance.Coin += 80;
             }
+            CasinoGameManager.Instance.SaveData();
 
         }
     }

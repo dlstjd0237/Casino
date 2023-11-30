@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Item">
+        <ui:VisualElement name="Item" class="item" style="flex-direction: row; align-items: center; justify-content: space-between; background-image: url(&apos;project://database/Assets/Leo82380/02_Sprites/button1.png?fileID=21300000&amp;guid=f14bac6e8f956aa4d937252fc6a364ce&amp;type=3#button1&apos;); background-color: rgba(255, 0, 0, 0);">
+            <ui:VisualElement name="image-contain" class="itemimagecontain" style="flex-grow: 1; background-color: rgb(248, 227, 30); background-image: url(&apos;project://database/Assets/Baek/02_Sprites/4.jpg?fileID=2800000&amp;guid=0bc1a17eee3c5c4428a2dec4398c622c&amp;type=3#4&apos;);" />
+            <ui:VisualElement name="itemuse-box" class="itemuse-box" style="flex-grow: 1; flex-direction: column; align-items: center; justify-content: space-around;">
+                <ui:VisualElement name="info-box" class="info-box" style="flex-grow: 1; background-color: rgb(92, 255, 0); width: 80%; height: 30%; align-items: center; justify-content: center;">
+                    <ui:Label tabindex="-1" text="아이템 이름" parse-escape-sequences="true" display-tooltip-when-elided="true" name="info-label" style="-unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; font-size: 50px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="btncontain-box" class="btncontain-box" style="flex-grow: 1; background-color: rgb(255, 0, 203); height: 70%; width: 80%; flex-direction: row; align-items: center; justify-content: space-around;">
+                    <ui:Button text="사용" parse-escape-sequences="true" display-tooltip-when-elided="true" name="use-btn" class="btn" style="font-size: 37px; white-space: normal;" />
+                    <ui:Button text="구매" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buy-btn" class="btn" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="보유수량 : " parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; position: absolute; top: 72px; left: 61px; font-size: 26px;" />
+                <ui:Label tabindex="-1" text="1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="amount" enable-rich-text="false" style="-unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; position: absolute; top: 72px; left: 178px; font-size: 26px;" />
+                <ui:Label tabindex="-1" text="가격 : " parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; -unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; top: 204px; left: 48px; font-size: 30px;" />
+                <ui:Label tabindex="-1" text="500" parse-escape-sequences="true" display-tooltip-when-elided="true" name="price-label" style="position: absolute; -unity-font: url(&apos;project://database/Assets/Baek/08_Fonts/DNFForgedBlade-Bold.ttf?fileID=12800000&amp;guid=a3164608decce6248953aedf0b60e60c&amp;type=3#DNFForgedBlade-Bold&apos;); -unity-font-definition: initial; top: 204px; left: 125px; font-size: 30px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

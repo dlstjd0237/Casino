@@ -23,6 +23,7 @@ public class selectManager : MonoBehaviour
         {
             if (button1.GetComponent<HB1>().horse1 == true)
             {
+               
                 howAema = 1;
                 DontDestroyOnLoad(gameObject);
                 SceneManager.LoadScene("dfd");
