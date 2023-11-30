@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_200.unity
     guid: 8114d11f72d2d2143ab1dd6790b566cb
   - enabled: 1
+    path: Assets/Karin/SlotMachine.unity
+    guid: 2635cb60522569e448b7ab6dee9374c9
+  - enabled: 1
     path: Assets/Baek/00_Scenes/BlackJacl/BlackJack_500.unity
     guid: 2db26baad09d0fb46a028c6740775796
   - enabled: 1

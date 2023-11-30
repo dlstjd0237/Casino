@@ -16,7 +16,6 @@ public class SlotGame : MonoBehaviour
     public TMP_Text currentCredits;
 
     private int betAmount;
-    private long credits = 1000;
 
     public int numberOfSym = 10;
 
@@ -44,7 +43,7 @@ public class SlotGame : MonoBehaviour
 
     private void Start()
     {
-        currentCredits.text = "Credits : " + credits.ToString();
+        currentCredits.text = "Coin : " + CasinoGameManager.Instance.Coin.ToString();
         SetUpProbability();
     }
 
@@ -68,7 +67,7 @@ public class SlotGame : MonoBehaviour
     {
         SetBetAmount();
         betResult.text = "";
-        if (betAmount > 0 && credits >= betAmount)
+        if (betAmount > 0 && CasinoGameManager.Instance.Coin >= betAmount)
         {
             startSpin = true;
         }
@@ -137,32 +136,32 @@ public class SlotGame : MonoBehaviour
         if (firstReelResult == secondReelResult && secondReelResult == thirdReelResult)
         {
             betResult.text = "!!JackPot!!";
-            credits += 10 * betAmount;
-            currentCredits.text = "Credits : " + credits.ToString();
+            CasinoGameManager.Instance.Coin += 10 * betAmount;
+            currentCredits.text = "Coin : " + CasinoGameManager.Instance.Coin.ToString();
         }
         else if (firstReelResult == secondReelResult)
         {
             betResult.text = "SoSo!!";
-            credits += (long)(2f * betAmount);
-            currentCredits.text = "Credits : " + credits.ToString();
+            CasinoGameManager.Instance.Coin += (int)(2f * betAmount);
+            currentCredits.text = "Coin : " + CasinoGameManager.Instance.Coin.ToString();
         }
         else if (firstReelResult == thirdReelResult)
         {
             betResult.text = "SoSo!!";
-            credits += (long)(2f * betAmount);
-            currentCredits.text = "Credits : " + credits.ToString();
+            CasinoGameManager.Instance.Coin += (int)(2f * betAmount);
+            currentCredits.text = "Coin : " + CasinoGameManager.Instance.Coin.ToString();
         }
         else if (secondReelResult == thirdReelResult)
         {
             betResult.text = "SoSo!!";
-            credits += (long)(2f * betAmount);
-            currentCredits.text = "Credits : " + credits.ToString();
+            CasinoGameManager.Instance.Coin += (int)(2f * betAmount);
+            currentCredits.text = "Credits : " + CasinoGameManager.Instance.Coin.ToString();
         }
         else
         {
             betResult.text = "You Lose!!";
-            credits -= betAmount;
-            currentCredits.text = "Credits : " + credits.ToString();
+            CasinoGameManager.Instance.Coin -= betAmount;
+            currentCredits.text = "Credits : " + CasinoGameManager.Instance.Coin.ToString();
         }
     }
 
