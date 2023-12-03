@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Mining : MonoBehaviour
 {
-    private float _coolTIme = 0.25f;
+    private float _coolTIme = 0.7f;
     private bool _touch;
     private void Update()
     {

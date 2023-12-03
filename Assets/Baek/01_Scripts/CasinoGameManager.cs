@@ -19,15 +19,15 @@ public class CoinData
 public class CasinoGameManager : Singleton<CasinoGameManager>
 {
     public CoinData _coinData = new CoinData();
-    private string path, filename = "CoinData";
+    private string path, filename = "/CoinData.json";
     public int Coin { get => _coinData.Coin; set => _coinData.Coin = value; }
 
 
     protected override void Awake()
     {
         base.Awake();
-        path = Application.persistentDataPath + "/";
-        Debug.Log(path);
+      path = Application.persistentDataPath + "/CoinData.json";
+
         LoadData();
 
 
@@ -49,13 +49,14 @@ public class CasinoGameManager : Singleton<CasinoGameManager>
     }
     public void SaveData()
     {
-        Debug.Log("ภ๚ภๅตส");
+
         string data = JsonUtility.ToJson(_coinData);
-        File.WriteAllText(path + filename, data);
+        File.WriteAllText(path, data);
     }
     public void LoadData()
     {
-        string data = File.ReadAllText(path + filename);
+
+        string data = File.ReadAllText(path);
         _coinData = JsonUtility.FromJson<CoinData>(data);
     }
 

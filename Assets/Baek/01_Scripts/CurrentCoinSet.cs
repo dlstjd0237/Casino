@@ -9,7 +9,10 @@ public class CurrentCoinSet : MonoBehaviour
         _coinText = GetComponent<TextMeshProUGUI>();
         CoinTextSet();
     }
-
+    private void Update()
+    {
+        CoinTextSet();
+    }
     public void CoinTextSet()
     {
         _coinText.SetText(CasinoGameManager.Instance.Coin.ToString());
